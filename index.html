@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>WebGIS Waduk Selorejo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css"/>
+
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Dari QGUS WEB -->
+<!-- <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+<link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+<link rel="stylesheet" href="css/leaflet-search.css">
+<link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css"> -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+<link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+<link rel="stylesheet" href="css/MarkerCluster.css">
+<link rel="stylesheet" href="css/MarkerCluster.Default.css">
+<style>
+   #map {
+     width: 100%;
+     height: 600px;
+     border-top: 10px solid salmon;
+     border-bottom: 10px solid lightskyblue;
+       }
+</style>
+</head>
+
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="0">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Maps</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Contact</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar --> 
+
+<!-- Banner Image -->
+<div class="banner text-center" data-scroll-index='0'>
+  <div class="banner-overlay">
+    <div class="container">
+      <h1 class="text-capitalize">WEBGIS WADUK SELOREJO</h1>
+      <H4>DESA PANDANSARI, KECAMATAN NGANTANG, KABUPATEN MALANG</H4>
+      <a href="#"data-scroll-nav="1" class="banner-btn">Get Started</a> </div>
+  </div>
+</div>
+<!-- End Banner Image --> 
+
+<!-- About -->
+<div class="about-us section-padding" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>WADUK SELOREJO</h3>
+        <span class="section-title-line"></span> </div>
+      <div class="col-md-6 mb-50">
+        <div class="section-info">
+          <div class="sub-title-paragraph">
+            <h5 align="justify">Waduk Selorejo merupakan destinasi wisata di Kecamatan Ngantang, Kabupaten Malang.</h5>
+            <p align="justify">Waduk Selorejo secara administratif berada pada Kabupaten Malang dan tepatnya berada pada Desa Pandansari, Kecamatan Ngantang. Waduk Selorejo mulai berfungsi sejak tahun 1972 dan telah memberikan banyak manfaat sebagai pengendali banjir, pembangkit listrik, perairan, perikanan, dan parawisata. (Yudiarto, 2014). Waduk Selorejo menjadi salah satu destinasi wisata yang cukup terkenal di Jawa Timur (Muljaningsih, 2019). Waduk Selorejo merupakan kawasan wisata yang memiliki banyak potensi yang dapat dikembangkan. Maka dari itu diperlukannya pembuatan Peta Kawasan Wisata Waduk Selorejo.</p>
+          </div>
+          <a href="#"data-scroll-nav="2" class="anchor-btn"> Learn more <i class="fas fa-arrow-right pd-lt-10"></i></a> </div>
+      </div>
+      <div class="col-md-6 mb-50">
+        <div class="section-img"> <img src="images/bg_waduk_01.jpg" alt="" class="img-responsive"/> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonials" data-scroll-index="2">
+  <div id="map">
+  </div>
+</div>
+
+
+<script src="js/qgis2web_expressions.js"></script>
+<script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+<script src="js/leaflet-svg-shape-markers.min.js"></script>
+<script src="js/leaflet.rotatedMarker.js"></script>
+<script src="js/leaflet.pattern.js"></script>
+<script src="js/leaflet-hash.js"></script>
+<script src="js/Autolinker.min.js"></script>
+<script src="js/rbush.min.js"></script>
+<script src="js/labelgun.min.js"></script>
+<script src="js/labels.js"></script>
+<script src="js/leaflet.markercluster.js"></script>
+<script src="data/Fasor1_1.js"></script>
+<script src="data/Kuliner1_2.js"></script>
+<script src="data/Masjid1_3.js"></script>
+<script src="data/Wisata1_4.js"></script>
+<script src="data/Hall1_5.js"></script>
+<script src="data/Penginapan1_6.js"></script>
+<script>
+var highlightLayer;
+function highlightFeature(e) {
+    highlightLayer = e.target;
+
+    if (e.target.feature.geometry.type === 'LineString') {
+      highlightLayer.setStyle({
+        color: '#ffff00',
+      });
+    } else {
+      highlightLayer.setStyle({
+        fillColor: '#ffff00',
+        fillOpacity: 1
+      });
+    }
+    highlightLayer.openPopup();
+}
+var map = L.map('map', {
+    zoomControl:true, maxZoom:21, minZoom:16
+}).fitBounds([[-7.883061552690396,112.3572857792753],[-7.875820811650324,112.37091019447776]]);
+var hash = new L.Hash(map);
+map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+var bounds_group = new L.featureGroup([]);
+function setBounds() {
+}
+map.createPane('pane_GoogleEarth_0');
+map.getPane('pane_GoogleEarth_0').style.zIndex = 400;
+var layer_GoogleEarth_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+    pane: 'pane_GoogleEarth_0',
+    opacity: 0.9,
+    attribution: '',
+    minZoom: 16,
+    maxZoom: 21,
+    minNativeZoom: 0,
+    maxNativeZoom: 22
+});
+layer_GoogleEarth_0;
+map.addLayer(layer_GoogleEarth_0);
+function pop_Fasor1_1(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Fasil</th>\
+                <td>' + (feature.properties['Nama_Fasil'] !== null ? autolinker.link(feature.properties['Nama_Fasil'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Fasor1_1_0() {
+    return {
+        pane: 'pane_Fasor1_1',
+rotationAngle: 0.0,
+rotationOrigin: 'center center',
+icon: L.icon({
+    iconUrl: 'markers/sport_soccer.svg',
+    iconSize: [22.799999999999997, 22.799999999999997]
+}),
+        interactive: true,
+    }
+}
+map.createPane('pane_Fasor1_1');
+map.getPane('pane_Fasor1_1').style.zIndex = 401;
+map.getPane('pane_Fasor1_1').style['mix-blend-mode'] = 'normal';
+var layer_Fasor1_1 = new L.geoJson(json_Fasor1_1, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Fasor1_1',
+    layerName: 'layer_Fasor1_1',
+    pane: 'pane_Fasor1_1',
+    onEachFeature: pop_Fasor1_1,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.marker(latlng, style_Fasor1_1_0(feature));
+    },
+});
+bounds_group.addLayer(layer_Fasor1_1);
+map.addLayer(layer_Fasor1_1);
+function pop_Kuliner1_2(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Tempa</th>\
+                <td>' + (feature.properties['Nama_Tempa'] !== null ? autolinker.link(feature.properties['Nama_Tempa'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Kuliner1_2_0() {
+    return {
+        pane: 'pane_Kuliner1_2',
+        radius: 8.0,
+        opacity: 1,
+        color: 'rgba(179,93,142,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 2.0,
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(242,125,191,1.0)',
+        interactive: true,
+    }
+}
+map.createPane('pane_Kuliner1_2');
+map.getPane('pane_Kuliner1_2').style.zIndex = 402;
+map.getPane('pane_Kuliner1_2').style['mix-blend-mode'] = 'normal';
+var layer_Kuliner1_2 = new L.geoJson(json_Kuliner1_2, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Kuliner1_2',
+    layerName: 'layer_Kuliner1_2',
+    pane: 'pane_Kuliner1_2',
+    onEachFeature: pop_Kuliner1_2,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.circleMarker(latlng, style_Kuliner1_2_0(feature));
+    },
+});
+bounds_group.addLayer(layer_Kuliner1_2);
+map.addLayer(layer_Kuliner1_2);
+function pop_Masjid1_3(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Tempa</th>\
+                <td>' + (feature.properties['Nama_Tempa'] !== null ? autolinker.link(feature.properties['Nama_Tempa'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Masjid1_3_0() {
+    return {
+        pane: 'pane_Masjid1_3',
+rotationAngle: 0.0,
+rotationOrigin: 'center center',
+icon: L.icon({
+    iconUrl: 'markers/place_of_worship_islamic3.svg',
+    iconSize: [22.799999999999997, 22.799999999999997]
+}),
+        interactive: true,
+    }
+}
+map.createPane('pane_Masjid1_3');
+map.getPane('pane_Masjid1_3').style.zIndex = 403;
+map.getPane('pane_Masjid1_3').style['mix-blend-mode'] = 'normal';
+var layer_Masjid1_3 = new L.geoJson(json_Masjid1_3, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Masjid1_3',
+    layerName: 'layer_Masjid1_3',
+    pane: 'pane_Masjid1_3',
+    onEachFeature: pop_Masjid1_3,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.marker(latlng, style_Masjid1_3_0(feature));
+    },
+});
+bounds_group.addLayer(layer_Masjid1_3);
+map.addLayer(layer_Masjid1_3);
+function pop_Wisata1_4(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Wisat</th>\
+                <td>' + (feature.properties['Nama_Wisat'] !== null ? autolinker.link(feature.properties['Nama_Wisat'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kapasitas</th>\
+                <td>' + (feature.properties['Kapasitas'] !== null ? autolinker.link(feature.properties['Kapasitas'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Harga_Sewa</th>\
+                <td>' + (feature.properties['Harga_Sewa'] !== null ? autolinker.link(feature.properties['Harga_Sewa'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Wisata1_4_0() {
+    return {
+        pane: 'pane_Wisata1_4',
+rotationAngle: 0.0,
+rotationOrigin: 'center center',
+icon: L.icon({
+    iconUrl: 'markers/blue-marker.svg',
+    iconSize: [49.4, 49.4]
+}),
+        interactive: true,
+    }
+}
+map.createPane('pane_Wisata1_4');
+map.getPane('pane_Wisata1_4').style.zIndex = 404;
+map.getPane('pane_Wisata1_4').style['mix-blend-mode'] = 'normal';
+var layer_Wisata1_4 = new L.geoJson(json_Wisata1_4, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Wisata1_4',
+    layerName: 'layer_Wisata1_4',
+    pane: 'pane_Wisata1_4',
+    onEachFeature: pop_Wisata1_4,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.marker(latlng, style_Wisata1_4_0(feature));
+    },
+});
+bounds_group.addLayer(layer_Wisata1_4);
+map.addLayer(layer_Wisata1_4);
+function pop_Hall1_5(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Hall</th>\
+                <td>' + (feature.properties['Nama_Hall'] !== null ? autolinker.link(feature.properties['Nama_Hall'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Harga_Sewa</th>\
+                <td>' + (feature.properties['Harga_Sewa'] !== null ? autolinker.link(feature.properties['Harga_Sewa'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Hall1_5_0() {
+    return {
+        pane: 'pane_Hall1_5',
+        shape: 'diamond',
+        radius: 10.0,
+        opacity: 1,
+        color: 'rgba(61,128,53,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 2.0,
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(243,255,5,1.0)',
+        interactive: true,
+    }
+}
+map.createPane('pane_Hall1_5');
+map.getPane('pane_Hall1_5').style.zIndex = 405;
+map.getPane('pane_Hall1_5').style['mix-blend-mode'] = 'normal';
+var layer_Hall1_5 = new L.geoJson(json_Hall1_5, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Hall1_5',
+    layerName: 'layer_Hall1_5',
+    pane: 'pane_Hall1_5',
+    onEachFeature: pop_Hall1_5,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.shapeMarker(latlng, style_Hall1_5_0(feature));
+    },
+});
+var cluster_Hall1_5 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+    spiderfyDistanceMultiplier: 2});
+cluster_Hall1_5.addLayer(layer_Hall1_5);
+
+bounds_group.addLayer(layer_Hall1_5);
+cluster_Hall1_5.addTo(map);
+function pop_Penginapan1_6(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <th scope="row">Nama_Objek</th>\
+                <td>' + (feature.properties['Nama_Objek'] !== null ? autolinker.link(feature.properties['Nama_Objek'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kategori</th>\
+                <td>' + (feature.properties['Kategori'] !== null ? autolinker.link(feature.properties['Kategori'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kode_Ruang</th>\
+                <td>' + (feature.properties['Kode_Ruang'] !== null ? autolinker.link(feature.properties['Kode_Ruang'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Kapasitas</th>\
+                <td>' + (feature.properties['Kapasitas'] !== null ? autolinker.link(feature.properties['Kapasitas'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Harga_Sewa</th>\
+                <td>' + (feature.properties['Harga_Sewa'] !== null ? autolinker.link(feature.properties['Harga_Sewa'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Jumlah_Kam</th>\
+                <td>' + (feature.properties['Jumlah_Kam'] !== null ? autolinker.link(feature.properties['Jumlah_Kam'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Fasilitas</th>\
+                <td>' + (feature.properties['Fasilitas'] !== null ? autolinker.link(feature.properties['Fasilitas'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <th scope="row">Foto</th>\
+                <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_Penginapan1_6_0() {
+    return {
+        pane: 'pane_Penginapan1_6',
+        interactive: true,
+    }
+}
+map.createPane('pane_Penginapan1_6');
+map.getPane('pane_Penginapan1_6').style.zIndex = 406;
+map.getPane('pane_Penginapan1_6').style['mix-blend-mode'] = 'normal';
+var layer_Penginapan1_6 = new L.geoJson(json_Penginapan1_6, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Penginapan1_6',
+    layerName: 'layer_Penginapan1_6',
+    pane: 'pane_Penginapan1_6',
+    onEachFeature: pop_Penginapan1_6,
+    pointToLayer: function (feature, latlng) {
+        var context = {
+            feature: feature,
+            variables: {}
+        };
+        return L.circleMarker(latlng, style_Penginapan1_6_0(feature));
+    },
+});
+bounds_group.addLayer(layer_Penginapan1_6);
+map.addLayer(layer_Penginapan1_6);
+setBounds();
+</script>
+
+
+<!-- End About --> 
+
+<!-- Methods -->
+<!-- <div class="testimonials" data-scroll-index='2'>
+  <div class="testimonials-overlay section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="owl-carousel owl-theme">
+            <div class="col-md-12 section-title text-center">
+              <h3>METHODS</h3>
+              <h6>Random Forest (RF)</h6>
+              <p class="m-auto">Random Forest developed by Breiman (Breiman, 2001), is one amongst the wide applied powerful ensemble supervised algorithm that uses bootstrap aggregation or “bagging” to create a collection of classifications (using multiple decision trees), with each training tree on a subset of the entire trainig data (Waske & Braun, 2009)</p>
+              <div class="testimonial-author text-center">
+                <h5>(Breiman, 2001), (Waske & Braun, 2009)</h5>
+              </div>
+            </div>
+            <div class="col-md-12 section-title text-center">
+              <h3>METHODS</h3>
+              <h6>Support Machine Learning (SVM)</h6>
+              <p class="m-auto">The support vector machine (SVM) is a type of supervised learning algorithm that is used to solve regression and classification issues. SVM classifiers create an ideal hyperplane in the training stage that separates multiple classes with the fewest misclassified pixels. SVM is used to select the extreme points/vectors that will help create the hyperplane</p>
+              <div class="testimonial-author text-center">
+                <h5>(Chih-Wei Hsu, Chih-Chung Chang, and Chih-Jen Lin, 2003)</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Methods  -->
+
+
+<!-- <div class="portfolio section-padding" data-scroll-index='2'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>Study Area</h3>
+        <span class="section-title-line"></span> </div>
+      <div class="col-md-5 mb-50">
+        <div class="section-info">
+          <div class="sub-title-paragraph">
+            <h5>Based on data from BNPB</h5>
+            <p>The area affected by the eruption of Mount Semeru consists of 9 sub-districts located in Malang Regency and 4 sub-districts from Lumajang Regency, among them:<br> - Pronojiwo District, Lumajang Regency <br> - Senduro District, Lumajang Regency <br> - Pasrujambe District, Lumajang Regency <br> - Candipuro District, Lumajang Regency <br> - Tirtoyudo District, Malang Regency <br> - Pagelaran District, Malang Regency <br> - Wajak District, Malang Regency <br> - Kepanjen District, Malang Regency <br> - Ampelgading District, Malang Regency <br> - Dampit District, Malang Regency <br> - Turen District, Malang Regency <br> - Gondanglegi District, Malang Regency <br> - Poncokusumo District, Malang Regency</p>
+          </div>
+          <a href="#"data-scroll-nav="2"></i></a> </div>
+      </div>
+      <div class="col-md-7 mb-20">
+      <div class="section-img"> <img src="images/bounderies.png" alt="" class="img-responsive"/> </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Project -->
+<!-- <div class="services section-padding bg-grey"data-scroll-index='3' >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>PROJECT</h3>
+        <p>Processing results when adding Indices (MNDVI, MNDWI, and SR) and without adding indices</p>
+        <span class="section-title-line"></span> </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-30">
+        <div class="service-box bg-pink text-center">
+          <div class="icon"> <i class="fas fa-chart-line"></i> </div>
+          <div class="icon-text">
+           <h4 class="title-box">WITH INDICES</h4>
+            <p>Using 1-7 Bands of Landsat 8, MNDVI, MNDWI, and SR</p>
+            <a href="#" class="banner-btn" onclick="window.location.href='https://geasivaul0401.users.earthengine.app/view/landcover'">Click Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-30">
+        <div class="service-box bg-pink text-center">
+          <div class="icon"> <i class="fas fa-bullhorn "></i> </div>
+          <div class="icon-text">
+            <h4 class="title-box">WITHOUT INDICES</h4>
+            <p>Only use 1-7 Bands of Landsat 8</p>
+            <a href="#" class="banner-btn" onclick="window.location.href='https://geasivaul0401.users.earthengine.app/view/landcover2'">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Project --> 
+
+<!-- Gallery -->
+<!-- <div class="portfolio section-padding" data-scroll-index='3'>
+  <div class="testimonials-overlay section-padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 section-title text-center">
+        <h3>Visualization</h3>
+        <p>Visualization project with RF and SVM Algorithm in 3 period</p>
+        <span class="section-title-line"></span> </div>
+      <div class="filtering text-center mb-10">
+        <button type="button" data-filter='*' class="active">All</button>
+        <button type="button" data-filter='.summer'>RANDOM FOREST</button>
+        <button type="button" data-filter='.spring'>SUPPORT MACHINE LEARNING</button>
+      </div>
+    </div>
+    </div>
+      <div class="gallery no-padding col-lg-12 col-sm-12">
+        <div class="col-lg-4 col-sm-6 spring no-padding">
+          <div class="item-img"> <a class="single-image" href="images/SVM1.png"></a>
+            <div class="part-img"> <img src="images/SVM1.png" alt="image">
+              <div class="overlay-img">
+                <h4>SUPPORT VECTOR MACHINE</h4>
+                <h6>Period 01 December 2020 - 30 May 2021</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 spring no-padding">
+          <div class="item-img"> <a class="single-image" href="images/SVM2.png"></a>
+            <div class="part-img"> <img src="images/SVM2.png" alt="image">
+              <div class="overlay-img">
+                <h4>SSUPPORT VECTOR MACHINE</h4>
+                <h6>Period 01 June 2021 - 31 November 2021</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 spring no-padding">
+          <div class="item-img"> <a class="single-image" href="images/SVM3.png"></a>
+            <div class="part-img"> <img src="images/SVM3.png" alt="image">
+              <div class="overlay-img">
+                <h4>SUPPORT VECTOR MACHINE</h4>
+                <h6>Period 01 December 2021 - 30 May 2022</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/RF1.png"></a>
+            <div class="part-img"> <img src="images/RF1.png" alt="image">
+              <div class="overlay-img">
+              <div id="cd-zoom-in"></div>
+              <div id="cd-zoom-out"></div>
+                <h4>RANDOM FOREST</h4>
+                <h6>Period 01 December 2020 - 30 May 2021</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/RF2.png"></a>
+            <div class="part-img"> <img src="images/RF2.png" alt="image">
+              <div class="overlay-img">
+                <h4>RANDOM FOREST</h4>
+                <h6>Period 01 June 2021 - 31 November 2021</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 summer no-padding">
+          <div class="item-img"> <a class="single-image" href="images/RF3.png"></a>
+            <div class="part-img"> <img src="images/RF3.png" alt="image">
+              <div class="overlay-img">
+                <h4>RANDOM FOREST</h4>
+                <h6>Period 01 December 2021 - 30 May 2022</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Gallery -->
+
+<!-- Video Pokoke
+<div class="video">
+  <video controls src="images/tjiamik.mp4"></video>
+  <video controls src="images/bukit.mp4"></video>
+  <video controls src="images/front.mp4"></video>
+</div>
+<style>
+  video {
+    float: center;
+    height: 300px;
+  }
+</style> -->
+
+<!-- Contact -->
+<div class="contact section-padding" data-scroll-index='4'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h3>KONTAK KAMI</h3>
+        <span class="section-title-line"></span> </div>
+      <div class="col-lg-5 col-md-4">
+        <div class="part-info">
+          <div class="info-box">
+            <div class="icon"> <i class="fas fa-map-marker-alt"></i> </div>
+            <div class="content">
+              <h4>Address :</h4>
+              <p href="#" class="Content-Type" onclick="window.location.href='https://www.its.ac.id/tgeomatika/'">Teknik Geomatika, ITS</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="icon"> <i class="fas fa-envelope"></i> </div>
+            <div class="content">
+              <h4>Team Member :</h4>
+              <p><a href="#">Farhan Qashidi Aditya (03311940000058)</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <div class="contact-form">
+          <form class='form' id='contact-form' method='post' data-toggle='validator'>
+            <input type='hidden' name='form-name' value='contact-form' />
+            <div class="messages"></div>
+            <div class="controls">
+              <div class="row">
+              <div class="col-md-6 mb-50">
+              <div class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.9864158979626!2d112.79247021465814!3d-7.280075573565436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa13c4642591%3A0x894902aff3849275!2sDepartemen%20Teknik%20Geomatika%2C%20Fakultas%20Teknik%20Sipil%2C%20Perencanaan%20dan%20Kebumian%20(FTSPK)%2C%20ITS!5e1!3m2!1sid!2sid!4v1658979614087!5m2!1sid!2sid" width="240%" height="312px" frameborder="0" style="border:0" allowfullscreen></iframe/> </div> 
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Contact -->
+
+<footer class="footer-copy">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p>Copyright &copy;2023.Farhan Qashidi Aditya <a href="http://w3Template.com" target="_blank" rel="dofollow">- Tugas Akhir</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<!-- owl carousel js --> 
+<script src="js/owl.carousel.min.js"></script> 
+<!-- magnific-popup --> 
+<script src="js/jquery.fancybox.min.js"></script> 
+
+<!-- scrollIt js --> 
+<script src="js/scrollIt.min.js"></script> 
+
+<!-- isotope.pkgd.min js --> 
+<script src="js/isotope.pkgd.min.js"></script> 
+<script>
+  $(window).on("scroll",function () {
+
+      var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+      if(bodyScroll > 130){
+
+          navbar.addClass("nav-scroll");
+          $('.navbar-logo img').attr('src','images/logo-black.png');
+
+
+      }else{
+
+          navbar.removeClass("nav-scroll");
+          $('.navbar-logo img').attr('src','images/logo-white.png');
+
+      }
+
+  });
+
+  $(window).on("load",function (){
+
+
+
+var bodyScroll = $(window).scrollTop(),
+navbar = $(".navbar");
+
+if(bodyScroll > 130){
+
+navbar.addClass("nav-scroll");
+$('.navbar-logo img').attr('src','images/logo-black.png');
+
+
+}else{
+
+navbar.removeClass("nav-scroll");
+$('.navbar-logo img').attr('src','images/logo-white.png');
+
+}
+
+/* smooth scroll
+  -------------------------------------------------------*/
+  $.scrollIt({
+
+easing: 'swing',      // the easing function for animation
+scrollTime: 900,       // how long (in ms) the animation takes
+activeClass: 'active', // class given to the active nav element
+onPageChange: null,    // function(pageIndex) that is called when page is changed
+topOffset: -63
+});
+
+/* isotope
+-------------------------------------------------------*/
+var $gallery = $('.gallery').isotope({});
+$('.gallery').isotope({
+
+    // options
+    itemSelector: '.item-img',
+    transitionDuration: '0.5s',
+
+});
+
+
+$(".gallery .single-image").fancybox({
+  'transitionIn'  : 'elastic',
+  'transitionOut' : 'elastic',
+  'speedIn'   : 600,
+  'speedOut'    : 200,
+  'overlayShow' : false
+});
+
+
+/* filter items on button click
+-------------------------------------------------------*/
+$('.filtering').on( 'click', 'button', function() {
+
+    var filterValue = $(this).attr('data-filter');
+
+    $gallery.isotope({ filter: filterValue });
+
+    });
+
+$('.filtering').on( 'click', 'button', function() {
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+});
+
+})
+
+$(function () {
+$( ".cover-bg" ).each(function() {
+    var attr = $(this).attr('data-image-src');
+
+    if (typeof attr !== typeof undefined && attr !== false) {
+      $(this).css('background-image', 'url('+attr+')');
+    }
+
+  });
+
+  /* sections background color from data background
+  -------------------------------------------------------*/
+  $("[data-background-color]").each(function() {
+      $(this).css("background-color", $(this).attr("data-background-color")  );
+  });
+
+
+/* Owl Caroursel testimonial
+  -------------------------------------------------------*/
+  
+  $('.testimonials .owl-carousel').owlCarousel({
+    loop:true,
+    autoplay:true,
+    items:1,
+    margin:30,
+    dots: true,
+    nav: false,
+    
+  });
+
+});
+
+</script>
+</body>
+</html>
